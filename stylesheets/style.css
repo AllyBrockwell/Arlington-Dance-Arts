@@ -24,6 +24,19 @@ body{
 	float: left;
 }
 
+#violin{
+	width: 25%;
+	height: 30%;
+	float: right;
+}
+
+#guitar{
+	width: 15%;
+	height: 40%;
+	float: left;
+	margin-left: 20%;
+}
+
 #hannah{
 	width: 19%;
 	height: 38%;
@@ -186,6 +199,21 @@ body{
 	text-align: center;
 	font-size: 24px;
 	font-family: fantasy;
+}
+/*format for the music page*/
+.first{
+	text-align: center;
+	font-size: 16px;
+	font-family: fantasy;
+	margin-left: 14%; /* Same as the width of the sidebar */
+	margin-right: 25%; /*same as width of picture*/
+}
+
+.second{
+ 	text-align: center;
+	font-size: 16px;
+	font-family: fantasy;
+	margin-left: 32%; /* Same as the width of the sidebar and picture */
 }
 
 /*format for the box around the form on the contact page*/
