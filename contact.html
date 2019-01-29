@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="utf-8"/>
+	<title>Dance Arts, Inc.</title>
+	<link rel="stylesheet" href="stylesheets/style.css" >
+</head>
+<body>
+
+	<!-- side bar navigation -->
+	<div class = "sidenav">
+    <!-- logo -->
+    <div class = "logo">
+      <img id="logo" src="pictures/logo.png" alt="logo">
+      
+	</div><br>
+	<!-- links to the other pages -->
+    	<a href="index.html">Home</a>
+    	<a href="info.html">Studio Info</a>
+    	<a href="dance.html">Dance Classes</a>
+		<a href="contact.html">Contact Us </a>
+	</div>
+
+	<!-- information section along with contact info-->
+	<div class = "contact">
+		<div id = "heading">
+			<div id = "c">
+			<b>Contact Us</b>
+			</div>
+			<p>We welcome your questions, comments, and suggestions. <br>
+				Please click the email link and contact us electronically, check us out on Facebook (Arlington Dance Arts Inc.),<br>
+				 and Instagram (arlington_dance_arts), or call our studio anytime.</p>
+			<p>We look forward to hearing from you!</p>
+			</div>
+		<b>Email us at:</b> dancearts.brandy@gmail.com<br>
+		<b>Call us at:</b> (901) 867-8844
+		<div id = "address">
+			<p><b>Dance Arts, Inc<br>
+			11695 Highway 70 Suite 105<br>
+			Arlington, Tennessee 38002</b><br>
+			<i>Located behind AutoZone!</i> </p>
+			</div>
+	</div>
+
+	<img id="hannah" src="pictures/hannah.JPG" alt = "hannah">
+
+	<!-- box model to hold the contact form-->
+	<form name = "contactForm">
+	<div class = "box2">
+		<!--Icon-->
+		<div class="chat icon"></div><br>
+		<!-- Grid layout for the question form-->
+		<div class = "wrapper">
+			<div class = "one"> 
+				<b>Your Name:</b> <input type="text"><br><br> <!-- text box -->
+				<b>Question about:</b> <!-- drop down box -->
+					<select>
+						<option value = "">Please choose an option</option>
+						<option value = "dance">Dance Classes</option>
+						<option value = "music">Music Classes</option>
+						<option value = "pricing"> Class Prices</option>
+						<option value = "other">Other</option>
+					</select>
+			</div>
+			<div class = "two">
+				<b>Your Email:</b> <input type = "text"><br><br> <!-- text box -->
+				<b>Reply Type:</b> <!-- drop down box -->
+				<select>
+					<option value = "">Please choose an option</option>
+					<option value = "phone">Phone Call</option>
+					<option value = "email">Email</option>
+				</select>
+			</div>
+		</div>
+
+		<b>Your Question(s):</b><br> <textarea rows="3" cols="85"></textarea><br><br> <!-- paragraph box -->
+		
+		<!--Button for the form and it calls the javascript to alert that the button has been pushed-->
+		<input type="button" value="Submit" onclick="myFunction()" id = "button"/>
+	</div>
+	</form>
+
+
+	<script type="text/javascript">
+		var num = 1;
+
+		function myFunction(){
+  			alert("You have submitted "+num +" form");
+		}
+
+	</script>
+
+
+</body>
+
+</html>
