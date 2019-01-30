@@ -74,7 +74,7 @@ body{
 }
 
 /*layout for the welcome wording*/
-#welcome{
+#welcome, #header{
 	text-align: center;
 	font-size: 36px;
 	font-family: fantasy;
@@ -83,6 +83,11 @@ body{
 /*layout for the slogan*/
 #slogan{
 	text-align: center;
+	font-size: 16px;
+	font-family: fantasy;
+}
+/*layour for the registration info*/
+#registration{
 	font-size: 16px;
 	font-family: fantasy;
 }
@@ -120,30 +125,6 @@ body{
     padding: 0px 10px;
 }
 
-/*chat icon formatting*/
-.chat.icon {
-  color: #000;
-  position: absolute;
-  width: 20px;
-  height: 15px;
-  border: solid 1px currentColor;
-	border-radius: 2px;
-	float: right;
-}
-
-.chat.icon:before {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 13px;
-  width: 5px;
-  height: 5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  background-color: white;
-  border-bottom: solid 1px currentColor;
-  border-right: solid 1px currentColor;
-}
 
 /*format for the box layout*/
 .box{
