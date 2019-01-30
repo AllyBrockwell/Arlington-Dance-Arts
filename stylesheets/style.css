@@ -18,6 +18,12 @@ body{
 	margin: 0em auto 0em auto;
 }
 
+#pointe{
+	width: 86%;
+	height: 150px;
+	margin-left: 14%;
+}
+
 #logo{
 	width:  100%;
 	background-color:  	transparent;
@@ -150,7 +156,7 @@ body{
     padding: 25px;
     margin: 25px;
 	color: black;
-	background-color: #FFF4E8;
+	background-color: #F5F4F5;
 	box-shadow: 4px 4px 4px 4px #543257;
 }
 
@@ -227,7 +233,7 @@ body{
     padding: 25px;
     margin: 25px;
 	color: black;
-	background-color: #FDFEF4;
+	background-color: #F5F4F5;
 	box-shadow: 4px 4px 4px 4px #543257;
 	margin-left: 25%;
 	text-align: center;
@@ -243,7 +249,7 @@ body{
   padding: 25px;
   margin: 25px;
 	color: black;
-	background-color: #FDFEF4;
+	background-color: #F5F4F5;
 	box-shadow: 4px 4px 4px 4px #543257;
 	margin-left: 45%;
 	text-align: center;
@@ -269,8 +275,23 @@ body{
 /*Some formatting for the form on the contact page*/
 #button{
 	font-family: fantasy;
-	color: #543257;
-	background-color: #E4E8EC;
+	font-size: 14px;
+	color: #FEF1FF;
+	background-color: #8C8B8B;
+	border-radius: 12px;
+	border-color: black;
+	padding-top: 3px;
+}
+
+/*formatting for text boxes*/
+input[type=text], input[type=password] {
+  width: 85%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+	font-size: 14px;
+	font-family: fantasy;
 }
 /*layout for the info page*/
 .studio, .mission {
