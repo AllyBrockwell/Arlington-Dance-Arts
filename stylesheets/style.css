@@ -181,6 +181,26 @@ body{
 	font-family: fantasy;
 }
 
+/*Header for the regist*/
+.regheader{
+	text-align: center;
+	font-size:30px;
+	font-family: fantasy;
+	padding-top: 6px;
+}
+
+/*format the numbered list on the registration page*/
+#numbered{
+	color: purple;
+	font-size: 18px;
+}
+
+/*format for the additonal fees header on registration page*/
+#additional{
+	color: red;
+	font-size: 17px;
+}
+
 /*layout for the contact page*/
 .contact{
 	text-align: center;
@@ -218,6 +238,7 @@ body{
 	box-shadow: 4px 4px 4px 4px #543257;
 	margin-left: 25%;
 	text-align: center;
+	border-radius: 25px;
 }
 /*format for the box around login form*/
 .login{
@@ -263,6 +284,32 @@ body{
 	border-color: black;
 	padding-top: 3px;
 }
+
+/* formatting for the dropdown box*/
+.dropdown{
+  font-size: 13px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+}
+.dropdown .select{
+  width: 80%;
+}
+
+.dropdown .select select{
+  background: transparent;
+  line-height: 1;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  width: 120%;
+  position: relative;
+  z-index: 10;
+  font-size: 1em;
+}
+
 
 /*formatting for text boxes*/
 input[type=text], input[type=password] {
@@ -340,3 +387,95 @@ caption {
 	background-color:  	transparent;
 	float: right;
 }
+
+/*for the dynamic schedule*/
+#myUL {
+  margin-left: 14%;
+  padding: 0;
+	font-family: fantasy;
+}
+
+/* Style the list items */
+#myUL li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #D3C0CD;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color*/
+#myUL li:nth-child(odd) {
+  background: #492F46;
+	color: white;
+}
+
+/* Style the close button  for the list*/
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header for the list */
+.header {
+  background-color: #D9CCE0;
+  padding: 20px 30px;
+  color: black;
+  text-align: center;
+	margin-left: 14%;
+	font-family: fantasy;
+}
+
+/* Clear floats after the header for the list*/
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input for the list*/
+input {
+  margin: 16%;
+  border: none;
+  border-radius: 0;
+  width: 60%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+	font-family: fantasy;
+}
+
+/* Style the "Add" button for the list*/
+.addBtn {
+  padding: 10px;
+  width: 5%;
+  background: #8C8B8B;
+  color: #FEF1FF;
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/*drop down for the schedule*/
