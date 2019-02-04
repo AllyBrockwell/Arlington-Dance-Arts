@@ -28,26 +28,17 @@
     <div id="myDIV" class="header">
   <h2 style="margin:5px">Weekly Schedule</h2>
   <input type="text" id="myInput" placeholder="Class Name and Time">
-  <div>
-    <form>
-  <input type="radio" id="Monday" name="Monday" checked>
-  Monday<br>
-
-  <input type="radio" id="Tuesday" name="Tuesday">
-  Tuesday<br>
-
-  <input type="radio" id="Wednesday" name="Wednesday">
-  Wednesday<br>
-
-  <input type="radio" id="Thursday" name="Thursday">
-  Thursday<br>
-
-  <input type="radio" id="Friday" name="Friday">
-  Friday<br>
-</div>
-</form>
-<br>
+  <select id = "days">
+    <option value = "">Select a Day</option>
+    <option value = "monday">Monday</option>
+    <option value ="tuesday">Tuesday</option>
+    <option value = "wednesday">Wednesday</option>
+    <option value ="thursday">Thursday</option>
+    <option value = "friday">Friday</option>
+  </select>
   <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
 <ul id="myUL">
   <!-- <li>Hit the gym</li>
   <li class="checked">Pay bills</li>
@@ -81,6 +72,12 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
+//Create a new list per day selected
+function newList(){
+  var li = document.createElement("li");
+
+}
+
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
@@ -89,8 +86,20 @@ function newElement() {
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
-  } else {
+  }else if(days ==='Select a Day'){
+    alert("You must pick a day!");
+  }else if(days ==='Monday'){
     document.getElementById("myUL").appendChild(li);
+  }else if(days ==='Tuesday'){
+      document.getElementById("myUL").appendChild(li);
+  }else if(days ==='Wednesday'){
+    document.getElementById("myUL").appendChild(li);
+  }else if(days ==='Thursday'){
+      document.getElementById("myUL").appendChild(li);
+  }else if(days ==='Friday'){
+    document.getElementById("myUL").appendChild(li);
+  }else {
+    alert("You must pick a day!");
   }
   document.getElementById("myInput").value = "";
 
