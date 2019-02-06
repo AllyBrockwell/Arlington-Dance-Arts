@@ -40,6 +40,21 @@
 </div>
 
 <ul id="myUL">
+  <ul id = "mon">
+    <div class = "day"><b>Monday</b></div>
+  </ul>
+  <ul id = "tue">
+  <div class = "day"><b>Tuesday</b></div>
+  </ul>
+  <ul id = "wed">
+  <div class = "day"><b>Wednesday</b></div>
+  </ul>
+  <ul id = "thurs">
+  <div class = "day"><b>Thursday</b></div>
+  </ul>
+  <ul id = "fri">
+  <div class = "day"><b>Friday</b></div>
+  </ul>
   <!-- <li>Hit the gym</li>
   <li class="checked">Pay bills</li>
   <li>Meet George</li>
@@ -72,38 +87,30 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-//Create a new list per day selected
-function newList(){
-  var li = document.createElement("li");
-
-}
-
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
+  var days = document.getElementById("days").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
-  // }else if(days ==='Select a Day'){
-  //   alert("You must pick a day!");
-  // }else if(days ==='Monday'){
-  //   document.getElementById("myUL").appendChild(li);
-  // }else if(days ==='Tuesday'){
-  //     document.getElementById("myUL").appendChild(li);
-  // }else if(days ==='Wednesday'){
-  //   document.getElementById("myUL").appendChild(li);
-  // }else if(days ==='Thursday'){
-  //     document.getElementById("myUL").appendChild(li);
-  // }else if(days ==='Friday'){
-  //   document.getElementById("myUL").appendChild(li);
-  // }else {
-  //   alert("You must pick a day!");
-  // }
-}else{
-  document.getElementById("myUL").appendChild(li);
-}
+  }else if(days ==='Select a Day'){
+    alert("You must pick a day!");
+  }else if(days ==='monday'){
+    document.getElementById("mon").appendChild(li);
+  }else if(days ==='tuesday'){
+      document.getElementById("tue").appendChild(li);
+  }else if(days ==='wednesday'){
+    document.getElementById("wed").appendChild(li);
+  }else if(days ==='thursday'){
+      document.getElementById("thurs").appendChild(li);
+  }else if(days ==='friday'){
+    document.getElementById("fri").appendChild(li);
+   }else {
+    alert("You must pick a day!");
+  }
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");

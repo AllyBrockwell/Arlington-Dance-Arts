@@ -231,7 +231,9 @@ body{
     width: auto;
 	height: auto;
     border: 2px solid #543257;
-    padding: 25px;
+		padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin: 25px;
 	color: black;
 	background-color: #F5F4F5;
@@ -282,8 +284,9 @@ body{
 	background-color: #8C8B8B;
 	border-radius: 12px;
 	border-color: black;
-	padding-top: 3px;
+	padding-top: 10px;
 }
+
 
 /* formatting for the dropdown box*/
 .dropdown{
@@ -393,16 +396,19 @@ caption {
   margin-left: 14%;
   padding: 0;
 	font-family: fantasy;
+	margin-right: 3%;
+	font-size: 14px;
+	text-align: center;
 }
 
 /* Style the list items */
 #myUL li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+  padding: 10px 10px 10px 10px;
   list-style-type: none;
-  background: #D3C0CD;
-  font-size: 18px;
+  background: #EDDAE7;
+  font-size: 16px;
   transition: 0.2s;
 
   /* make the list items unselectable */
@@ -414,8 +420,8 @@ caption {
 
 /* Set all odd list items to a different color*/
 #myUL li:nth-child(odd) {
-  background: #492F46;
-	color: white;
+  background: #FFEAF0;
+	color: black;
 }
 
 /* Style the close button  for the list*/
@@ -446,6 +452,13 @@ caption {
   content: "";
   display: table;
   clear: both;
+}
+
+/*format for the day headers in the list*/
+.day{
+	margin-top: 10px;
+	font-size: 20px;
+	text-align: center;
 }
 
 /* Style the input for the list*/
