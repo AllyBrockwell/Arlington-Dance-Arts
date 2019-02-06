@@ -86,21 +86,24 @@ function newElement() {
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
-  }else if(days ==='Select a Day'){
-    alert("You must pick a day!");
-  }else if(days ==='Monday'){
-    document.getElementById("myUL").appendChild(li);
-  }else if(days ==='Tuesday'){
-      document.getElementById("myUL").appendChild(li);
-  }else if(days ==='Wednesday'){
-    document.getElementById("myUL").appendChild(li);
-  }else if(days ==='Thursday'){
-      document.getElementById("myUL").appendChild(li);
-  }else if(days ==='Friday'){
-    document.getElementById("myUL").appendChild(li);
-  }else {
-    alert("You must pick a day!");
-  }
+  // }else if(days ==='Select a Day'){
+  //   alert("You must pick a day!");
+  // }else if(days ==='Monday'){
+  //   document.getElementById("myUL").appendChild(li);
+  // }else if(days ==='Tuesday'){
+  //     document.getElementById("myUL").appendChild(li);
+  // }else if(days ==='Wednesday'){
+  //   document.getElementById("myUL").appendChild(li);
+  // }else if(days ==='Thursday'){
+  //     document.getElementById("myUL").appendChild(li);
+  // }else if(days ==='Friday'){
+  //   document.getElementById("myUL").appendChild(li);
+  // }else {
+  //   alert("You must pick a day!");
+  // }
+}else{
+  document.getElementById("myUL").appendChild(li);
+}
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
