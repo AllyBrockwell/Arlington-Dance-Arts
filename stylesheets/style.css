@@ -28,6 +28,7 @@ body{
 	width:  100%;
 	background-color:  	transparent;
 	float: left;
+	padding-bottom: 50px;
 }
 
 #violin{
@@ -142,9 +143,10 @@ body{
 }
 
 /*layout for the contact and dance heading*/
-#c,#d{
+#c,#d, #mus{
+	padding-top: 20px;
 	text-align: center;
-	font-size: 28px;
+	font-size: 36px;
 	font-family: fantasy;
 }
 
@@ -277,7 +279,7 @@ body{
 }
 
 /*Some formatting for the form on the contact page*/
-#button{
+#contactbutton{
 	font-family: fantasy;
 	font-size: 14px;
 	color: #FEF1FF;
@@ -285,6 +287,16 @@ body{
 	border-radius: 12px;
 	border-color: black;
 	padding-top: 10px;
+}
+
+/*format for the login button*/
+#loginbutton{
+	font-family: fantasy;
+	font-size: 14px;
+	color: #FEF1FF;
+	background-color: #8C8B8B;
+	border-radius: 8px;
+	padding-top: 3px;
 }
 
 
@@ -312,7 +324,6 @@ body{
   z-index: 10;
   font-size: 1em;
 }
-
 
 /*formatting for text boxes*/
 input[type=text], input[type=password] {
@@ -440,7 +451,7 @@ caption {
 /* Style the header for the list */
 .header {
   background-color: #D9CCE0;
-  padding: 20px 30px;
+  padding: 10px 30px;
   color: black;
   text-align: center;
 	margin-left: 14%;
@@ -476,7 +487,6 @@ input {
 
 /* Style the "Add" button for the list*/
 .addBtn {
-  padding: 10px;
   width: 5%;
   background: #8C8B8B;
   color: #FEF1FF;
@@ -486,6 +496,7 @@ input {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 12px;
+	padding: 10px 6px 8px 6px; /*top right bottom left*/
 }
 
 .addBtn:hover {
@@ -496,8 +507,13 @@ input {
 #days{
 	background: transparent;
 	font-size: 13px;
-  padding: 10px 8px 10px 14px;
+  padding: 10px 8px 10px 14px;/*top right bottom left*/
 	width: 15%;
 	font-family: fantasy;
 	background: white;
+}
+
+/*formatting for the time boxes in the schedule page*/
+input[type=time]{
+	width: 10%;
 }
