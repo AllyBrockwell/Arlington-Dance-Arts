@@ -11,15 +11,15 @@
 
     <!-- logo -->
     <div class = "logo">
-      <img id="logo" src="pictures/logo.gif" alt ="logo">
+      <h1 id="logo_block"><img id="logo" src="pictures/logo.gif">
 
-    </div><br>
+      </h1>
+    </div>
     <!--links for the side nav bar-->
     	<a href="home.html">Home</a>
     	<a href="timesheets.html">Timesheets</a>
       <a href = "forms.html"> Forms </a>
       <a href = "pictures.html"> Pictures</a>
-      <a href="calendar.html">Calendar</a>
     	<a href="schedule.html">Schedule</a>
     	<a href="employee.html">Logout</a>
     </div>
@@ -38,8 +38,14 @@
     <option value = "friday">Friday</option>
   </select>
   <br>
-  <b>Start Time</b><input type ="time" id = "startTime" placeholder = "Start Time">
-  <b>End Time</b><input type ="time" id = "endTime" placeholder = "End Time">
+  <div class = "start">
+    <b>Start Time:</b>
+  </div>
+  <div class = "end">
+    <b>End Time:</b>
+  </div>
+  <input type ="time" id = "startTime" placeholder = "Start Time">
+  <input type ="time" id = "endTime" placeholder = "End Time">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
@@ -93,11 +99,24 @@ function newElement() {
   var start = document.getElementById("startTime").value;
   var end = document.getElementById("endTime").value;
   var t = document.createTextNode(inputValue);
+  var s = document.createTextNode(start);
+  var e = document.createTextNode(end);
+  var space = document.createTextNode("         ");
+  var to = document.createTextNode(" to ");
   li.appendChild(t);
+  li.appendChild(space);
+  li.appendChild(s);
+  li.appendChild(to);
+  li.appendChild(space);
+  li.appendChild(e);
   if (inputValue === '') {
     alert("You must write something!");
   }else if(days ==='Select a Day'){
     alert("You must pick a day!");
+  }else if(start === ''){
+    alert("You must select a Start Time!");
+  }else if(end === ''){
+    alert("You must select a End Time!");
   }else if(days ==='monday'){
     document.getElementById("mon").appendChild(li);
   }else if(days ==='tuesday'){
