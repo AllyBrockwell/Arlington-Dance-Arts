@@ -32,15 +32,15 @@ body{
 
 #violin{
 	width: 25%;
-	height: 30%;
 	float: right;
+	padding-right: 2%;
 }
 
 #guitar{
 	width: 15%;
-	height: 40%;
 	float: left;
-	margin-left: 20%;
+	margin-left: 17%;
+	padding-right: 2%;
 }
 
 #hannah{
@@ -53,6 +53,8 @@ body{
 	width: 30%;
 	height: 38%;
 	float: right;
+	margin-right: 10%;
+	margin-left: 2%;
 }
 
 #babies{
@@ -103,6 +105,12 @@ body{
     background-color: black;
     overflow-x: hidden;
 		font-family: fantasy;
+}
+
+/*formatting for the title of sections*/
+.name{
+	padding-top: 2%;
+	font-size: 18px;
 }
 
 /* The navigation menu links */
@@ -215,6 +223,7 @@ body{
 	font-family: fantasy;
 	margin-left: 14%; /* Same as the width of the sidebar */
 	margin-right: 25%; /*same as width of picture*/
+	padding: 0% 3% 0% 3%;
 }
 
 .second{
@@ -222,6 +231,7 @@ body{
 	font-size: 16px;
 	font-family: fantasy;
 	margin-left: 32%; /* Same as the width of the sidebar and picture */
+	padding: 0% 3% 0% 3%;
 }
 
 /*format for the box around the form on the contact page*/
@@ -277,6 +287,12 @@ body{
   grid-row: 1;
 }
 
+/*format the contact page information*/
+.contactinfo{
+	width: 50%;
+	margin-left: 25%;
+}
+
 /*Some formatting for the form on the contact page*/
 #contactbutton{
 	font-family: fantasy;
@@ -285,7 +301,8 @@ body{
 	background-color: #8C8B8B;
 	border-radius: 12px;
 	border-color: black;
-	padding-top: 10px;
+	padding-top: 2%;
+	margin: 3% 0% 3% 20%;
 }
 
 /*format for the login button*/
@@ -324,6 +341,13 @@ body{
   font-size: 1em;
 }
 
+/*formatting for the telephone number box*/
+input[type=tel]{
+	margin: 0% 0% 0% 0%;
+	width: 88%;
+	border: 1px solid #ccc;
+}
+
 /*formatting for text boxes*/
 input[type=text], input[type=password] {
   width: 85%;
@@ -341,6 +365,8 @@ input[type=text], input[type=password] {
 	font-family: fantasy;
 	margin-left: 14%; /* Same as the width of the sidebar */
 	margin-right: 30%; /*same as width of picture*/
+		padding: 0% 3% 0% 3%;
+
 }
 
 /*layout for the info on the dance page*/
