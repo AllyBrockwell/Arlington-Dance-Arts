@@ -384,42 +384,6 @@ input[type=text], input[type=password] {
 	font-family: fantasy;
 }
 
-/*the next several css codes are for formatting the table on the dance class page*/
-table {
-  border-collapse: collapse;
-  border: 2px solid #543257;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  margin-left: 15%;
-  font-family: fantasy;
-}
-
-td, th {
-  border: 1px solid #543257;
-  padding: 5px 10px;
-}
-
-th {
-  background-color: #B47FFF;
-  font-size: 16px;
-}
-
-td {
-  text-align: center;
-}
-
-tr:nth-child(even) td {
-  background-color: #FFF4E8;
-}
-
-tr:nth-child(odd) td {
-  background-color: #E4E8EC;
-}
-
-caption {
-  padding: 10px;
-}
-
 /*format the photostrip image*/
 #photostrip{
 	width:  86%; /*100% - the width of the side bar*/
@@ -585,4 +549,16 @@ input[type=time]{
 .timetwo {
   grid-column: 3;
   grid-row: 1;
+}
+
+#timesheetform{
+	display: none;
+}
+#timebutton{
+	font-family: fantasy;
+	font-size: 14px;
+	color: #FEF1FF;
+	background-color: #8C8B8B;
+	border-radius: 8px;
+	padding-top: 3px;
 }
