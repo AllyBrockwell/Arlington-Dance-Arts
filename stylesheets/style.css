@@ -239,7 +239,7 @@ body{
 	display: inline-block;
 	font-family: fantasy;
 	font-size: 14px;
-    width: auto;
+    width: 50%;
 	height: auto;
     border: 2px solid #543257;
 		padding-top: 25px;
@@ -279,12 +279,10 @@ body{
   grid-auto-rows: minmax(100px, auto);
 }
 .one {
-  grid-column: 1;
-  grid-row: 1;
+  width: 50%;
 }
 .two {
-  grid-column: 2;
-  grid-row: 1;
+  width: 50%;
 }
 
 /*format the contact page information*/
@@ -324,6 +322,7 @@ body{
   border: 1px solid #ccc;
   border-radius: 6px;
   position: relative;
+	width: 92%;
 }
 .dropdown .select{
   width: 80%;
@@ -344,19 +343,21 @@ body{
 /*formatting for the telephone number box*/
 input[type=tel]{
 	margin: 0% 0% 0% 0%;
-	width: 88%;
+	width: 93%;
 	border: 1px solid #ccc;
+	height: 90%;
 }
 
 /*formatting for text boxes*/
 input[type=text], input[type=password] {
-  width: 85%;
+  width: 90%;
   padding: 8px 15px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
 	font-size: 14px;
 	font-family: fantasy;
+	height: 13%;
 }
 /*layout for the info page*/
 .studio, .mission {
@@ -515,6 +516,7 @@ input[type=time]{
 
 .employeeSheets{
 	margin-left: 47%;
+	margin-top: 3%;
 	font-family: fantasy;
 	font-size: 24px;
 }
@@ -553,6 +555,7 @@ input[type=time]{
 
 #timesheetform{
 	display: none;
+	background: #EDDAE7;
 }
 #timebutton{
 	font-family: fantasy;
@@ -560,5 +563,5 @@ input[type=time]{
 	color: #FEF1FF;
 	background-color: #8C8B8B;
 	border-radius: 8px;
-	padding-top: 3px;
+	padding-top: 3%;
 }

@@ -58,17 +58,18 @@
 	<form name = "contactForm">
 	<div class = "box2">
 		<!-- Grid layout for the question form-->
-		<div class = "wrapper">
-			<div class = "one">
-				<b>Your First Name:</b> <input type="text"><br><br> <!-- text box -->
-				<b>Your Email:</b> <input type="text"><br> <!-- text box -->
-				<b>Your Phone Number: </b> <input type="tel" id="phone" name="phone"
-       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br><br><a>format: 123-456-7890</a>
-
-			</div>
-			<div class = "two">
-				<b>Your Last Name:</b> <input type = "text"><br><br> <!-- text box -->
-				<b>Reply Type:</b> <!-- drop down box -->
+		<table>
+			<tr>
+				<td class = "one"><b>Your First Name:</b> <input type="text"><br><br> <!-- text box --></td>
+				<td class = "two"><b>Your Last Name:</b> <input type = "text"><br><br> <!-- text box --><br></td>
+			</tr>
+			<tr>
+				<td><b>Your Email:</b> <input type="text"><br> <!-- text box --></td>
+				<td><b>Your Phone Number: 123-456-7890</b> <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+			</tr>
+			<tr>
+				<td><b>Reply Type:</b> <!-- drop down box -->
 				<div class = "dropdown">
 				<div class = "select">
 				<select>
@@ -76,22 +77,23 @@
 					<option value = "phone">Phone Call</option>
 					<option value = "email">Email</option>
 				</select>
-
 			</div>
-			</div>
-			<b>Question about:</b> <!-- drop down box -->
-		<div class = "dropdown">
-			<div class = "select">
-				<select>
-					<option value = "">Please choose an option</option>
-					<option value = "dance">Dance Classes</option>
-					<option value = "music">Music Classes</option>
-					<option value = "pricing"> Class Prices</option>
-					<option value = "other">Other</option>
-				</select>
-			</div>
-			</div>
-			</div>
+			</div></td>
+				<td><b>Question about:</b> <!-- drop down box -->
+			<div class = "dropdown">
+				<div class = "select">
+					<select>
+						<option value = "">Please choose an option</option>
+						<option value = "dance">Dance Classes</option>
+						<option value = "music">Music Classes</option>
+						<option value = "pricing"> Class Prices</option>
+						<option value = "other">Other</option>
+					</select>
+				</div>
+				</div></td>
+			</tr>
+		</table>
+		 <div class = "wrapper">
 		</div>
 		<br>
 		<b>Your Question(s):</b><br> <textarea rows="7" cols="85"></textarea><br><br> <!-- paragraph box -->
