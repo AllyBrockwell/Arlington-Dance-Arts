@@ -304,13 +304,24 @@ body{
 }
 
 /*format for the login button*/
-#loginbutton{
+#loginbutton, #timeButton,#save,#submit{
 	font-family: fantasy;
 	font-size: 14px;
 	color: #FEF1FF;
 	background-color: #8C8B8B;
 	border-radius: 8px;
 	padding-top: 3px;
+}
+#schedulesave{
+	font-family: fantasy;
+	font-size: 14px;
+	color: #FEF1FF;
+	background-color: #8C8B8B;
+	border-radius: 8px;
+	padding-top: 3px;
+	/* padding-left: 45%; */
+	position: relative;
+	left: 54%;
 }
 
 
@@ -553,9 +564,18 @@ input[type=time]{
   grid-row: 1;
 }
 
+/* styling for home page to add an employee */
+.createuser{
+align-content: center;
+font-family: fantasy;
+padding:3% 15% 3% 15%;
+}
+
 #timesheetform{
 	display: none;
 	background: #EDDAE7;
+	position: relative;
+ 	right: 30%;
 }
 #timebutton{
 	font-family: fantasy;

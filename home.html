@@ -22,8 +22,30 @@
       <a href = "pictures.html"> Pictures</a>
     	<a href="schedule.html">Schedule</a>
     	<a href="employee.html">Logout</a>
-
     </div>
+
+    <div class = "createuser">
+      <button type="button" id="createEmployee" onclick = "employee()">Add an Employee</button><br>
+      <form id = "addemployee" method = "post" action = "create.php">
+        <b>Email: </b> <input type="text" name="email"><br>
+        <b>First Name:</b> <input type="text" name="firstName"><br>
+        <b>Last Name: </b><input type="text" name="lastName"><br>
+        <b>Initial Password: </b><input type="text" name="password"><br>
+        <button type="button" id="submit">Submit</button>
+      </form>
+    </div>
+
+
+    <script>
+    function employee() {
+      var x = document.getElementById("addemployee");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
 
 </body>
 </html>

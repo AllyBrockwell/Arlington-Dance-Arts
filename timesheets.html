@@ -25,13 +25,27 @@
     </div>
 
     <div class = "employeeSheets">
-      <button type="button" id="timeButton" onclick = "timesheet()">Enter a new Timesheet</button><br>
+
+      <b>Current Timesheet</b><br>
+      <div class = "timesheetbox">
+    				<br>
+      </div>
+<br>
+      <button type="button" id="timeButton" onclick = "timesheet()">Create a new Timesheet</button><br>
       <form id="timesheetform">
+        <b>Month: </b> <input type="text" name="month">
         <b>First Name:</b> <input type="text" name="firstName">
         <b>Last Name: </b><input type="text" name="lastName">
+        <button type="button" id="addDay" onclick = "day()">Add new Day</button><br>
+        <div id = "dayform">
+          <b>Date: </b> <input type = "text" name = "date">
+          <b>Time In:</b><input type = "text" name="timein">
+          <b>Time Out:</b><input type = "text" name="timeout">
+        </div>
+        <button type="button" id="save">Save</button>
         <button type="button" id="submit">Submit</button>
       </form>
-
+<br>
       <b>Submitted Timesheets</b><br>
       <div class = "timesheetbox">
     				<b>Month</b> <br>
@@ -61,6 +75,15 @@ function timesheet() {
     x.style.display = "block";
   } else {
     x.style.display = "none";
+  }
+}
+
+function addDay(){
+  var z = document.getElementById("dayform");
+  if(z.style.display ==="none"){
+    z.style.display = "block";
+  }else{
+    z.style.display = "block";
   }
 }
 </script>

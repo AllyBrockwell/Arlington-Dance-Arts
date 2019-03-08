@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="stylesheets/style.css" >
 </head>
 <body>
-
+	<?php
+	    $mysqli = new mysqli("localhost", "username", "password", "dbname");
+	?>
 	<!-- side bar navigation -->
 	<div class = "sidenav">
     <!-- logo -->
@@ -55,16 +57,16 @@
 	<img id="hannah" src="pictures/hannah.JPG" alt = "hannah">
 
 	<!-- box model to hold the contact form-->
-	<form name = "contactForm">
+	<form name = "contactForm" action="submitted.php" method="post">
 	<div class = "box2">
 		<!-- Grid layout for the question form-->
 		<table>
 			<tr>
-				<td class = "one"><b>Your First Name:</b> <input type="text"><br><br> <!-- text box --></td>
-				<td class = "two"><b>Your Last Name:</b> <input type = "text"><br><br> <!-- text box --><br></td>
+				<td class = "one"><b>Your First Name:</b> <input type="text" name = "fname"><br><br> <!-- text box --></td>
+				<td class = "two"><b>Your Last Name:</b> <input type = "text" name = "lname"><br><br> <!-- text box --><br></td>
 			</tr>
 			<tr>
-				<td><b>Your Email:</b> <input type="text"><br> <!-- text box --></td>
+				<td><b>Your Email:</b> <input type="text" name = "email"><br> <!-- text box --></td>
 				<td><b>Your Phone Number: 123-456-7890</b> <input type="tel" id="phone" name="phone"
        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
 			</tr>
@@ -72,7 +74,7 @@
 				<td><b>Reply Type:</b> <!-- drop down box -->
 				<div class = "dropdown">
 				<div class = "select">
-				<select>
+				<select name = "rtype">
 					<option value = "">Please choose an option</option>
 					<option value = "phone">Phone Call</option>
 					<option value = "email">Email</option>
@@ -81,8 +83,8 @@
 			</div></td>
 				<td><b>Question about:</b> <!-- drop down box -->
 			<div class = "dropdown">
-				<div class = "select">
-					<select>
+				<div class = "select" name = "qtype">
+					<select name = "qtype">
 						<option value = "">Please choose an option</option>
 						<option value = "dance">Dance Classes</option>
 						<option value = "music">Music Classes</option>
@@ -96,10 +98,10 @@
 		 <div class = "wrapper">
 		</div>
 		<br>
-		<b>Your Question(s):</b><br> <textarea rows="7" cols="85"></textarea><br><br> <!-- paragraph box -->
+		<b>Your Question(s):</b><br> <textarea rows="7" cols="85" name = "question"></textarea><br><br> <!-- paragraph box -->
 
 		<!--Button for the form and it calls the javascript to alert that the button has been pushed-->
-		<input type="button" value="Submit" id = "contactbutton"/>
+		<input type="submit" value="Submit" id = "contactbutton"/>
 	</div>
 	</form>
 
