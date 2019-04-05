@@ -1,3 +1,17 @@
+<?php
+include_once('connect-mysql.php');
+$query1 = "SELECT * FROM Schedule WHERE day = 'monday' ORDER BY timeStart Asc";
+$query2 = "SELECT * FROM Schedule WHERE day = 'tuesday' ORDER BY timeStart Asc";
+$query3 = "SELECT * FROM Schedule WHERE day = 'wednesday' ORDER BY timeStart Asc";
+$query4 = "SELECT * FROM Schedule WHERE day = 'thursday' ORDER BY timeStart Asc";
+$query5 = "SELECT * FROM Schedule WHERE day = 'friday' ORDER BY timeStart Asc";
+$retval1 = mysqli_query($con,$query1);
+$retval2 = mysqli_query($con,$query2);
+$retval3 = mysqli_query($con,$query3);
+$retval4 = mysqli_query($con,$query4);
+$retval5 = mysqli_query($con,$query5);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +33,13 @@
     	<a href="index.html">Home</a>
     	<a href="info.html">Studio Info</a>
 			<a href="music.html">Music Lessons</a>
-    	<a href="dance.html">Dance Classes</a>
-			  <a href = "view.html"> Pictures</a>
+    	<a href="dance.php">Dance Classes</a>
         <a href="contact.html">Contact Us</a>
 				<a href = "registration.html">Registration</a>
 				  <a href = "calendar.html">Calendar</a>
 				<!-- link to google maps-->
 			<a href="https://goo.gl/maps/vcsAF4nZ4VA2" target="_blank">Directions</a>
-			<a href = "employee.html">Employee Login</a>
+			<a href = "employee.php">Employee Login</a>
     </div>
 
     <div class = "dance">
@@ -35,7 +48,7 @@
             <b>Outline of Dance Programs</b><br>
         </div>
         <div id = "da">
-            <i>(Class Schedule Below)</i>
+            <a href = "#myUL"><i>(Class Schedule Below)</i></a>
         </div>
 
         <img id="babies" src="pictures/babies.jpg" alt="babies">
@@ -85,8 +98,85 @@
         Classes held in 8 week rotation. Beginners to experienced dancers. Couples welcomed, but not
         necessary. Dancers take the floor!  1 hour class $55.00 per month</a></p><br>
 
-
     </div>
+
+		<hr>
+		<?php
+
+		if(!$con){
+		  die('Could not connect: ' . mysqli_error($con));
+		}
+
+		    ?>
+
+		<ul id="myUL">
+		  <ul id = "mon">
+		    <div class = "day"><b>Monday</b></div>
+		    <?php if( ! $retval1 ){
+		      die('Could not get the data' . mysqli_error($con));
+		    }
+
+		      while ($row = mysqli_fetch_array($retval1)) {
+		         ?>
+		    <li><?php echo $row['className']." ".$row['timeStart']."  -  ".$row['timeEnd']; ?></li>
+		    <?php
+		  }
+		  ?>
+		  </ul>
+		  <ul id = "tue">
+		  <div class = "day"><b>Tuesday</b></div>
+		  <?php if( ! $retval2 ){
+		    die('Could not get the data' . mysqli_error($con));
+		  }
+
+		    while ($row = mysqli_fetch_array($retval2)) {
+		       ?>
+		  <li><?php echo $row['className']." ".$row['timeStart']."  -  ".$row['timeEnd']; ?></li>
+		  <?php
+		}
+		?>
+		  </ul>
+		  <ul id = "wed">
+		  <div class = "day"><b>Wednesday</b></div>
+		  <?php if( ! $retval3 ){
+		    die('Could not get the data' . mysqli_error($con));
+		  }
+
+		    while ($row = mysqli_fetch_array($retval3)) {
+		       ?>
+		  <li><?php echo $row['className']." ".$row['timeStart']."  -  ".$row['timeEnd']; ?></li>
+		  <?php
+		}
+		?>
+		  </ul>
+		  <ul id = "thurs">
+		  <div class = "day"><b>Thursday</b></div>
+		  <?php if( ! $retval4 ){
+		    die('Could not get the data' . mysqli_error($con));
+		  }
+
+		    while ($row = mysqli_fetch_array($retval4)) {
+		       ?>
+		  <li><?php echo $row['className']." ".$row['timeStart']."  -  ".$row['timeEnd']; ?></li>
+		  <?php
+		}
+		?>
+		  </ul>
+		  <ul id = "fri">
+		  <div class = "day"><b>Friday</b></div>
+		  <?php if( ! $retval5 ){
+		    die('Could not get the data' . mysqli_error($con));
+		  }
+
+		    while ($row = mysqli_fetch_array($retval5)) {
+		       ?>
+		  <li><?php echo $row['className']." ".$row['timeStart']."  -  ".$row['timeEnd']; ?></li>
+		  <?php
+		}
+		?>
+		  </ul>
+
+		</ul>
 
 </body>
 

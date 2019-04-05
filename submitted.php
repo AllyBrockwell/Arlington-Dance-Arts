@@ -1,36 +1,28 @@
 <?php
+session_start();
+include_once('connect-mysql.php');
 
-$formID = filter_input(INPUT_POST, 'formID')
-$fname = filter_input(INPUT_POST, 'fname');
-$lname = filter_input(INPUT_POST, 'lname');
-$email = filter_input(INPUT_POST, 'email');
-$phonenumber = filter_input(INPUT_POST, 'phonenumber');
-$qtype = filter_input(INPUT_POST, 'qtype');
-$rtype = filter_input(INPUT_POST, 'rtype');
-$question = filter_input(INPUT_POST, 'question');
-
-$host = "localhost:8085";
-$dbusername = "akbrockw"
-$dbpassword = "allykat1"
-$dbname = "Arlington Dance Arts";
-
-//Create connection
-$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
-
-if(mysqli_connect_error()){
-  die('Connection Error('.mysqli_connect_errno().')'
-  .mysqli_connect_error());
+if(!$con){
+  die('Could not connect: ' . mysqli_error($con));
 }
-else{
-  $sql = "INSERT INTO ContactForm(formID, fname, lname, email, phonenumber, qtype, rtype, question)
-  values('$formID','$fname', '$lname', '$email', '$phonenumber', '$qtype', '$rtype', '$question')";
-  if($conn -> query ($sql)){
-    echo "Form was submitted successfully";
-  }
-  else{
-    echo "Error: ".$sql."<br>".$conn->error;
-  }
-  $conn->close();
-}
+$formID = uniqid();
+//$formID = mysqli_real_escape_string($con, $_REQUEST['formID']);
+$fname = mysqli_real_escape_string($con, $_REQUEST['fname']);
+$lname = mysqli_real_escape_string($con, $_REQUEST['lname']);
+$email = mysqli_real_escape_string($con, $_REQUEST['email']);
+$phone = mysqli_real_escape_string($con, $_REQUEST['phone']);
+$qtype = mysqli_real_escape_string($con, $_REQUEST['qtype']);
+$rtype = mysqli_real_escape_string($con, $_REQUEST['rtype']);
+$question = mysqli_real_escape_string($con, $_REQUEST['question']);
 
- ?>
+$sql = "INSERT INTO ContactForm Values('$formID','$fname', '$lname', '$email', '$phone', '$qtype', '$rtype', '$question')";
+
+if(mysqli_query($con,$sql)){
+  header('Location: contact.html');
+  echo 'Form submitted successfully';
+}else{
+  echo 'Error submitting from, please try again';
+}
+mysqli_close($con);
+
+?>
