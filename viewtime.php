@@ -1,5 +1,6 @@
 <?php
 include_once('connect-mysql.php');
+<<<<<<< HEAD
 
 include('functions.php');
 if (!isAdmin()) {
@@ -26,6 +27,9 @@ if(!empty($_GET["order"])) {
 	$order = $_GET["order"];
 }
 $query = "SELECT * from Timesheet ORDER BY " . $orderBy . " " . $order;
+=======
+$query = "SELECT * FROM Timesheet ORDER BY date ASC";
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 $retval = mysqli_query($con,$query);
 ?>
 
@@ -47,6 +51,7 @@ $retval = mysqli_query($con,$query);
       </h1>
     </div>
     <!--links for the side nav bar-->
+<<<<<<< HEAD
     	<a href="home.php">Home</a>
       <a href = "viewtime.php">View Timesheets</a>
       <a href = "forms.php"> Forms </a>
@@ -86,6 +91,28 @@ $retval = mysqli_query($con,$query);
   <th><span>Time Out</span></th>
 	</tr>
 </thead>
+=======
+    	<a href="home.html">Home</a>
+    	<a href="timesheets.php">Timesheets</a>
+      <a href = "viewtime.php">View Timesheets</a>
+      <a href = "forms.php"> Forms </a>
+      <a href = "pictures.html"> Pictures</a>
+    	<a href="schedule.php">Schedule</a>
+    	<a href="employee.html">Logout</a>
+    </div>
+
+    <div class = "ownerSheets">
+      <br><b>Submitted Timesheets</b><br>
+      <div class = "timesheetbox">
+        <table border = "1" align = "center">
+          <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Date</td>
+            <td>Time In</td>
+            <td>Time Out</td>
+          </tr>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
           <?php
 
           if(!$con){
@@ -102,7 +129,11 @@ $retval = mysqli_query($con,$query);
                 <tr>
                   <td><?php echo $row['fname']; ?></td>
                   <td><?php echo $row['lname']; ?></td>
+<<<<<<< HEAD
                   <td><?php echo $row['the_date']; ?></td>
+=======
+                  <td><?php echo $row['date']; ?></td>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
                   <td><?php echo $row['timeIn']; ?></td>
                   <td><?php echo $row['timeOut']; ?></td>
                   <!-- <//?php echo "<td>" . "<a href='deletetime.php?id=".$row['Eid']."'>Delete</a>" . "</td>"; ?> -->

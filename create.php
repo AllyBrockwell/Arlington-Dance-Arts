@@ -5,6 +5,7 @@ include_once('connect-mysql.php');
 if(!$con){
   die('Could not connectr: ' . mysqli_error($con));
 }
+<<<<<<< HEAD
 //
 // $email = mysqli_real_escape_string($con, $_REQUEST['email']);
 // $fname = mysqli_real_escape_string($con, $_REQUEST['fname']);
@@ -18,6 +19,15 @@ $type = mysqli_real_escape_string($con, $_REQUEST['user_type']);
 $password = md5(mysqli_real_escape_string($con, $_REQUEST['password']),PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO Users(username,email,user_type,password) VALUES('$username','$email', '$type','$password')";
+=======
+$Eid = uniqid();
+$email = mysqli_real_escape_string($con, $_REQUEST['email']);
+$fname = mysqli_real_escape_string($con, $_REQUEST['fname']);
+$lname = mysqli_real_escape_string($con, $_REQUEST['lname']);
+$password = password_hash(mysqli_real_escape_string($con, $_REQUEST['password']),PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO Employee(Eid,email,fname,lname,password) VALUES('$Eid','$email','$fname','$lname','$password')";
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 
 if(mysqli_query($con,$sql)){
   header('Location: home.html');

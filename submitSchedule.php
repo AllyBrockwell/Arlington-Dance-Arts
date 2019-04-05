@@ -7,7 +7,10 @@ if(!$con){
 }
 $class = mysqli_real_escape_string($con, $_REQUEST['class']);
 $timeStart = mysqli_real_escape_string($con, $_REQUEST['timeStart']);
+<<<<<<< HEAD
 date('h:i A', strtotime($_REQUEST['timeStart']));
+=======
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 $timeEnd = mysqli_real_escape_string($con, $_REQUEST['timeEnd']);
 $day = mysqli_real_escape_string($con, $_REQUEST['day']);
 

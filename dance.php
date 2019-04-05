@@ -34,6 +34,10 @@ $retval5 = mysqli_query($con,$query5);
     	<a href="info.html">Studio Info</a>
 			<a href="music.html">Music Lessons</a>
     	<a href="dance.php">Dance Classes</a>
+<<<<<<< HEAD:dance.php
+=======
+			  <a href = "view.html"> Pictures</a>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452:dance.php
         <a href="contact.html">Contact Us</a>
 				<a href = "registration.html">Registration</a>
 				  <a href = "calendar.html">Calendar</a>

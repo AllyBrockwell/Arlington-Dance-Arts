@@ -1,5 +1,6 @@
 <?php
 include_once('connect-mysql.php');
+<<<<<<< HEAD
 include('functions.php');
 if (!isAdmin()) {
 	$_SESSION['msg'] = "You must log in first";
@@ -14,6 +15,8 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['user']);
 	header("location: employee.php");
 }
+=======
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 $query = "SELECT * FROM ContactForm";
 $retval = mysqli_query($con,$query);
 ?>
@@ -36,11 +39,21 @@ $retval = mysqli_query($con,$query);
       </h1>
     </div>
     <!--links for the side nav bar-->
+<<<<<<< HEAD
     <a href="home.php">Home</a>
     <a href = "viewtime.php">View Timesheets</a>
     <a href = "forms.php"> Forms </a>
     <a href="schedule.php">Schedule</a>
     <a href="employee.php">Logout</a>
+=======
+    <a href="home.html">Home</a>
+    <a href="timesheets.php">Timesheets</a>
+    <a href = "viewtime.php">View Timesheets</a>
+    <a href = "forms.php"> Forms </a>
+    <a href = "pictures.html"> Pictures</a>
+    <a href="schedule.php">Schedule</a>
+    <a href="employee.html">Logout</a>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
     </div>
 
     <div class = "formheader">

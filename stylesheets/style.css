@@ -593,6 +593,7 @@ input[type=time]{
 /* styling for home page to add an employee */
 .createuser,.addtime{
 display: inline-block;
+<<<<<<< HEAD
 font-family: fantasy;
 font-size: 20px;
 	width: auto;
@@ -618,6 +619,8 @@ margin-bottom: 3%;
 
 .formbox{
 display: inline-block;
+=======
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 font-family: fantasy;
 font-size: 20px;
 	width: auto;
@@ -630,8 +633,37 @@ background-color: #F5F4F5;
 box-shadow: 4px 4px 4px 4px #543257;
 text-align: center;
 border-radius: 25px;
+<<<<<<< HEAD
 margin-left: 15%;
 margin-right: 1%;
+=======
+margin-left: 39%;
+margin-bottom: 3%;
+}
+
+.add{
+	margin-left: 47%;
+	margin-top: 3%;
+	font-family: fantasy;
+	font-size: 24px;
+}
+
+.formbox{
+display: inline-block;
+font-family: fantasy;
+font-size: 20px;
+	width: auto;
+height: auto;
+	border: 2px solid #543257;
+	padding: 2% 4% 2% 4%;
+	margin-top:3%;
+color: black;
+background-color: #F5F4F5;
+box-shadow: 4px 4px 4px 4px #543257;
+text-align: center;
+border-radius: 25px;
+margin-left: 27%;
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 margin-bottom: 3%;
 }
 
@@ -639,6 +671,7 @@ margin-bottom: 3%;
 	margin-left: 47%;
 	margin-top: 3%;
 	font-family: fantasy;
+<<<<<<< HEAD
 	font-size: 30px;
 }
 
@@ -646,6 +679,15 @@ margin-bottom: 3%;
 	/* display: none; */
 	position: relative;
  	right: 40%;
+=======
+	font-size: 24px;
+}
+
+#timesheetform{
+	display: none;
+	position: relative;
+ 	right: 50%;
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
 }
 #timebutton{
 	font-family: fantasy;
