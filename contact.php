@@ -47,7 +47,15 @@ if(isset($_POST["submit"]))
     	<a href="info.html">Studio Info</a>
 			<a href="music.html">Music Lessons</a>
     	<a href="dance.php">Dance Classes</a>
+<<<<<<< HEAD:contact.php
 		<a href="contact.php">Contact Us </a>
+=======
+<<<<<<< HEAD
+=======
+			  <a href = "view.html"> Pictures</a>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
+		<a href="contact.html">Contact Us </a>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011:contact.html
 		<a href = "registration.html">Registration</a>
 	<a href="https://goo.gl/maps/vcsAF4nZ4VA2" target="_blank">Directions</a>
 	<a href = "employee.php">Employee Login</a>
@@ -120,9 +128,15 @@ if(isset($_POST["submit"]))
 		 <div class = "wrapper">
 		</div>
 		<br>
+<<<<<<< HEAD:contact.php
 		<b>Your Question(s):</b><br> <textarea rows="auto" cols="75" name="question"></textarea><br><br> <!-- paragraph box -->
 
 		<input type="submit" value="Submit"/ id = "contactbutton" name="submit">
+=======
+		<b>Your Question(s):</b><br> <textarea rows="7" cols="85" name="question"></textarea><br><br> <!-- paragraph box -->
+
+		<input type="submit" value="Submit"/ id = "contactbutton">
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011:contact.html
 	</div>
 	</form>
 

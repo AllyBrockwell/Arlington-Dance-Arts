@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include('connect-mysql.php');
 session_start();
@@ -52,6 +53,22 @@ if(!empty($_GET["order"])) {
 }
 $query = "SELECT * from Users ORDER BY " . $orderBy . " " . $order;
 $retval = mysqli_query($con,$query);
+=======
+<?php include('functions.php');
+if (!isAdmin()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: employee.php');
+}
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: employee.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: employee.php");
+}
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
 
 ?>
 <!DOCTYPE html>
@@ -65,20 +82,35 @@ $retval = mysqli_query($con,$query);
   <body>
     <div class = "sidenav">
 
+<<<<<<< HEAD
+=======
+    <!-- logo -->
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     <div class = "logo">
       <h1 id="logo_block"><img id="logo" src="pictures/logo.gif">
 
       </h1>
     </div>
+<<<<<<< HEAD
+=======
+    <!--links for the side nav bar-->
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     <a href="home.php">Home</a>
     <a href = "viewtime.php">View Timesheets</a>
     <a href = "forms.php"> Forms </a>
     <a href="schedule.php">Schedule</a>
+<<<<<<< HEAD
     <!-- <a href="employee.php?logout='1'">Logout</a> -->
 		<?php
   	echo '<label><a href="logout.php">Logout</a></label>';
   	?>
 
+=======
+    <a href="employee.php?logout='1'">Logout</a>
+		<!-- <form method='post' action="">
+            <input type="submit" value="Logout" name="logout">
+        </form>-->
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     </div>
     <div class = "add">
     <b>Add an Employee</b><br>
@@ -86,6 +118,11 @@ $retval = mysqli_query($con,$query);
     <div class = "createuser">
 
       <form method="post" action="home.php">
+<<<<<<< HEAD
+=======
+
+  <?php echo display_error(); ?>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
   <div class="input-group">
     <label>First Name</label>
     <input type="text" name="fname" value="">
@@ -119,6 +156,7 @@ $retval = mysqli_query($con,$query);
     <input type="password" name="password_2">
   </div>
   <div class="input-group">
+<<<<<<< HEAD
     <button type="submit" id="submit" class="btn" name="register">Submit</button>
   </div>
 </form>
@@ -174,5 +212,11 @@ if($orderBy == "fname" and $order == "desc") {
 				?>
 			</table>
 		</div>
+=======
+    <button type="submit" id="submit" class="btn" name="register_btn">Submit</button>
+  </div>
+</form>
+    </div>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
 </body>
 </html>

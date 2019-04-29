@@ -1,5 +1,6 @@
 <?php
 include_once('connect-mysql.php');
+<<<<<<< HEAD
 session_start();
 if(!isset($_SESSION["username"]))
 {
@@ -8,6 +9,25 @@ if(!isset($_SESSION["username"]))
 if($_SESSION['user_type']!="admin"){
 	header("location:employee.php");
 }
+=======
+<<<<<<< HEAD
+include('functions.php');
+if (!isAdmin()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: employee.php');
+}
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: employee.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: employee.php");
+}
+=======
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
 $query1 = "SELECT * FROM Schedule WHERE day = 'monday' ORDER BY timeStart Asc";
 $query2 = "SELECT * FROM Schedule WHERE day = 'tuesday' ORDER BY timeStart Asc";
 $query3 = "SELECT * FROM Schedule WHERE day = 'wednesday' ORDER BY timeStart Asc";
@@ -38,13 +58,30 @@ $retval5 = mysqli_query($con,$query5);
       </h1>
     </div>
     <!--links for the side nav bar-->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     <a href="home.php">Home</a>
     <a href = "viewtime.php">View Timesheets</a>
     <a href = "forms.php"> Forms </a>
     <a href="schedule.php">Schedule</a>
+<<<<<<< HEAD
 		<?php
   	echo '<label><a href="logout.php">Logout</a></label>';
   	?>
+=======
+    <a href="employee.php">Logout</a>
+=======
+    <a href="home.html">Home</a>
+    <a href="timesheets.php">Timesheets</a>
+    <a href = "viewtime.php">View Timesheets</a>
+    <a href = "forms.php"> Forms </a>
+    <a href = "pictures.html"> Pictures</a>
+    <a href="schedule.php">Schedule</a>
+    <a href="employee.html">Logout</a>
+>>>>>>> 992ca97101e3e9fb47082203f8db57ccb166c452
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     </div>
 
 <!-- the dynamic schedule -->
@@ -90,9 +127,13 @@ if(!$con){
 
       while ($row = mysqli_fetch_array($retval1)) {
          ?>
+<<<<<<< HEAD
     <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']?><a href="deleteitem.php?id=<?php echo ($row["className"]);?>" onclick="return confirm('Are you sure you want to delete?');">Delete</a></li>
 
 		<!-- <a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li> -->
+=======
+    <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']." "."<a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
     <?php
   }
   ?>
@@ -105,7 +146,11 @@ if(!$con){
 
     while ($row = mysqli_fetch_array($retval2)) {
        ?>
+<<<<<<< HEAD
 			 <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']?><a href="deleteitem.php?id=<?php echo ($row["className"]);?>" onclick="return confirm('Are you sure you want to delete?');">Delete</a></li>
+=======
+  <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']." "."<a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
   <?php
 }
 ?>
@@ -118,7 +163,11 @@ if(!$con){
 
     while ($row = mysqli_fetch_array($retval3)) {
        ?>
+<<<<<<< HEAD
 			 <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']?><a href="deleteitem.php?id=<?php echo ($row["className"]);?>" onclick="return confirm('Are you sure you want to delete?');">Delete</a></li>
+=======
+  <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']." "."<a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
   <?php
 }
 ?>
@@ -131,7 +180,11 @@ if(!$con){
 
     while ($row = mysqli_fetch_array($retval4)) {
        ?>
+<<<<<<< HEAD
 			 <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']?><a href="deleteitem.php?id=<?php echo ($row["className"]);?>" onclick="return confirm('Are you sure you want to delete?');">Delete</a></li>
+=======
+  <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']." "."<a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
   <?php
 }
 ?>
@@ -144,7 +197,11 @@ if(!$con){
 
     while ($row = mysqli_fetch_array($retval5)) {
        ?>
+<<<<<<< HEAD
 			 <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']?><a href="deleteitem.php?id=<?php echo ($row["className"]);?>" onclick="return confirm('Are you sure you want to delete?');">Delete</a></li>
+=======
+  <li><?php echo $row['className']." ".$row['timeStart']." - ".$row['timeEnd']." "."<a href='deleteitem.php?id=".$row['className']."'>Delete</a>"; ?></li>
+>>>>>>> b4d27aea74b4684ff266e79214267e6778893011
   <?php
 }
 ?>
