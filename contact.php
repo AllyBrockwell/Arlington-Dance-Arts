@@ -1,34 +1,56 @@
+<?php
+include_once('connect-mysql.php');
+session_start();
+if(isset($_POST["submit"]))
+{
+	$sql = "INSERT INTO ContactForm Values(?,?, ?, ?, ?, ?, ?, ?)";
+
+	if($stmt = mysqli_prepare($con, $sql)){
+	    mysqli_stmt_bind_param($stmt, "ssssssss", $formID, $fname, $lname, $email, $phone, $qtype, $rtype,$question);
+
+	    $formID = uniqid();
+	    $fname = mysqli_real_escape_string($con, $_REQUEST['fname']);
+	    $lname = mysqli_real_escape_string($con, $_REQUEST['lname']);
+	    $email = mysqli_real_escape_string($con, $_REQUEST['email']);
+	    $phone = mysqli_real_escape_string($con, $_REQUEST['phone']);
+	    $qtype = mysqli_real_escape_string($con, $_REQUEST['qtype']);
+	    $rtype = mysqli_real_escape_string($con, $_REQUEST['rtype']);
+	    $question = mysqli_real_escape_string($con, $_REQUEST['question']);
+
+			if( mysqli_stmt_execute($stmt))
+			{
+					 echo '<script>alert("Form Submitted")</script>';
+			}
+
+}
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
 	<title>Dance Arts, Inc.</title>
 	<link rel="stylesheet" href="stylesheets/style.css" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<?php
-	    $mysqli = new mysqli("localhost", "username", "password", "dbname");
-	?>
 	<!-- side bar navigation -->
 	<div class = "sidenav">
-    <!-- logo -->
+
 		<div class = "logo">
 			<h1 id="logo_block"><img id="logo" src="pictures/logo.gif">
 
 			</h1>
 		</div>
-	<!-- links to the other pages -->
     	<a href="index.html">Home</a>
     	<a href="info.html">Studio Info</a>
 			<a href="music.html">Music Lessons</a>
-    	<a href="dance.html">Dance Classes</a>
-			  <a href = "view.html"> Pictures</a>
-		<a href="contact.html">Contact Us </a>
+    	<a href="dance.php">Dance Classes</a>
+		<a href="contact.php">Contact Us </a>
 		<a href = "registration.html">Registration</a>
-		  <a href = "calendar.html">Calendar</a>
-		<!-- link to google maps-->
 	<a href="https://goo.gl/maps/vcsAF4nZ4VA2" target="_blank">Directions</a>
-	<a href = "employee.html">Employee Login</a>
+	<a href = "employee.php">Employee Login</a>
 	</div>
 
 	<!-- information section along with contact info-->
@@ -57,16 +79,16 @@
 	<img id="hannah" src="pictures/hannah.JPG" alt = "hannah">
 
 	<!-- box model to hold the contact form-->
-	<form name = "contactForm" action="submitted.php" method="post">
+	<form name = "contactForm" action="contact.php" method="POST">
 	<div class = "box2">
 		<!-- Grid layout for the question form-->
 		<table>
 			<tr>
-				<td class = "one"><b>Your First Name:</b> <input type="text" name = "fname"><br><br> <!-- text box --></td>
-				<td class = "two"><b>Your Last Name:</b> <input type = "text" name = "lname"><br><br> <!-- text box --><br></td>
+				<td class = "one"><b>Your First Name:</b> <input type="text" name="fname"><br><br> <!-- text box --></td>
+				<td class = "two"><b>Your Last Name:</b> <input type="text" name="lname"><br><br> <!-- text box --><br></td>
 			</tr>
 			<tr>
-				<td><b>Your Email:</b> <input type="text" name = "email"><br> <!-- text box --></td>
+				<td><b>Your Email:</b> <input type="text" name="email"><br> <!-- text box --></td>
 				<td><b>Your Phone Number: 123-456-7890</b> <input type="tel" id="phone" name="phone"
        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
 			</tr>
@@ -74,7 +96,7 @@
 				<td><b>Reply Type:</b> <!-- drop down box -->
 				<div class = "dropdown">
 				<div class = "select">
-				<select name = "rtype">
+				<select name="rtype">
 					<option value = "">Please choose an option</option>
 					<option value = "phone">Phone Call</option>
 					<option value = "email">Email</option>
@@ -83,7 +105,7 @@
 			</div></td>
 				<td><b>Question about:</b> <!-- drop down box -->
 			<div class = "dropdown">
-				<div class = "select" name = "qtype">
+				<div class = "select" name="qtype">
 					<select name = "qtype">
 						<option value = "">Please choose an option</option>
 						<option value = "dance">Dance Classes</option>
@@ -98,10 +120,9 @@
 		 <div class = "wrapper">
 		</div>
 		<br>
-		<b>Your Question(s):</b><br> <textarea rows="7" cols="85" name = "question"></textarea><br><br> <!-- paragraph box -->
+		<b>Your Question(s):</b><br> <textarea rows="auto" cols="75" name="question"></textarea><br><br> <!-- paragraph box -->
 
-		<!--Button for the form and it calls the javascript to alert that the button has been pushed-->
-		<input type="submit" value="Submit" id = "contactbutton"/>
+		<input type="submit" value="Submit"/ id = "contactbutton" name="submit">
 	</div>
 	</form>
 
